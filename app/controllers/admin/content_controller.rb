@@ -240,4 +240,9 @@ class Admin::ContentController < Admin::BaseController
   def setup_resources
     @resources = Resource.by_created_at
   end
+
+  def merge(article_id)
+    @article.merge_with(article_id)
+    redirect_to :action => 'index'
+  end
 end
