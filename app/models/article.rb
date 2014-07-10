@@ -216,6 +216,7 @@ class Article < Content
     merged_article = Article.find(article_id)
     if article_id != self.id
       self.update_attribute(:body, self.body + " " + merged_article.body) unless merged_article.nil?
+      Article.destroy(article_id)
     end
   end
 
