@@ -13,6 +13,4 @@ Feature: Merge Articles
 
 	Scenario: Successfully merge articles
 		Given I am on the article page for "Foobar"
-		And I fill in "merge_with" with "4"
-		And I press "Merge"
-		Then I should see "you are not allowed to perform this action"
+		Then I should not see "Article id"
