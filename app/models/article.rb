@@ -424,6 +424,10 @@ class Article < Content
     user.admin? || user_id == user.id
   end
 
+  def user_is_admin?(user)
+    user.admin?
+  end
+
   protected
 
   def set_published_at
